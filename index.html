@@ -32,7 +32,7 @@
                     </section>  
 
                     <section>
-                        <label>E-mail<input id="e-mail" type="email" ></label>
+                        <label>E-mail<input id="email" type="email" ></label>
                     </section>  
 
                     <section>
@@ -46,12 +46,29 @@
 
                 <div class="cv">
                     <p class="title">Attach your CV</p>
-                    <label class="file-wrapper">
-                        Upload file
-                        <input id="cv" type="file" accept=".pdf, .docx, .doc, .odt, .rtf" onchange="upload()" required>
-                    </label>
-                    <span>Formats: .pdf, .docx, .doc, .odt, .rtf</span>
-                    <p class="file" id="file"></p>
+                    <section id="upload">
+                        <label class="file-wrapper">
+                            Upload file
+                            <!-- accept=".pdf, .docx, .doc, .odt, .rtf" -->
+                            <input id="cv" type="file"  onchange="upload()" required>
+                        </label>
+                        <span>Formats: .pdf, .docx, .doc, .odt, .rtf</span>
+                    </section>
+
+                    <div id="file" class="file">
+
+                        <svg class="clip" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.60465 8.23253C6.41861 8.41857 6.41861 8.7209 6.60465 8.90694C6.7907 9.09299 7.09302 9.09299 7.27907 8.90694L9.80233 6.38369C10.2326 5.95346 10.4651 5.39532 10.4651 4.79067C10.4651 4.18601 10.2326 3.62788 9.80233 3.19764C8.91861 2.31392 7.48837 2.31392 6.61628 3.19764L0.918605 8.89532C0.325582 9.48834 1.30184e-06 10.279 1.22865e-06 11.1162C1.15546e-06 11.9535 0.325582 12.7442 0.918605 13.3372C2.15116 14.5697 4.13954 14.5697 5.37209 13.3372L11.0581 7.65113C11.8256 6.88369 12.2442 5.87206 12.2442 4.79067C12.2442 3.70927 11.8256 2.68602 11.0581 1.9302C10.2907 1.16276 9.27907 0.744155 8.19768 0.744155C7.11628 0.744154 6.09302 1.16276 5.33721 1.9302L2.81396 4.45346C2.62791 4.6395 2.62791 4.94183 2.81396 5.12787C3 5.31392 3.30233 5.31392 3.48837 5.12787L6.01163 2.60462C6.59302 2.02322 7.37209 1.69764 8.19768 1.69764C9.02326 1.69764 9.80233 2.02322 10.3837 2.60462C10.9651 3.18602 11.2907 3.96508 11.2907 4.79067C11.2907 5.61625 10.9651 6.39532 10.3837 6.97671L4.69767 12.6628C4.27907 13.0814 3.73256 13.3023 3.15116 13.3023C2.56977 13.3023 2.01163 13.0697 1.60465 12.6628C1.18605 12.2442 0.965118 11.6976 0.965118 11.1162C0.965118 10.5349 1.19768 9.97671 1.60465 9.56974L7.30233 3.87206C7.80233 3.37206 8.62791 3.37206 9.13954 3.87206C9.38372 4.11625 9.52326 4.44183 9.52326 4.79067C9.52326 5.1395 9.38372 5.46508 9.13954 5.70927L6.60465 8.23253Z"/>
+                        </svg>
+
+                        <p id="filename"><span></span></p>
+
+                        <svg class="delete" onclick="deleteFile()" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.45975 3.50003L6.80122 5.84148C7.06626 6.10652 7.06626 6.53617 6.80122 6.80121C6.53624 7.06625 6.10654 7.06619 5.84151 6.80121L3.50003 4.45971L1.15851 6.80126C0.89347 7.06625 0.463829 7.06625 0.198792 6.80126C-0.0661915 6.53622 -0.0661915 6.10657 0.198792 5.84153L2.54026 3.50003L0.198737 1.15848C-0.0662458 0.89344 -0.0662458 0.463794 0.198737 0.198699C0.331256 0.0662332 0.504926 0 0.678595 0C0.852265 0 1.02593 0.0662875 1.15845 0.198699L3.49998 2.54031L5.84151 0.198699C5.97403 0.0662875 6.14769 0 6.32136 0C6.49503 0 6.6687 0.0662875 6.80122 0.198699C7.06626 0.463794 7.06626 0.89344 6.80122 1.15848L4.45975 3.50003Z"/>
+                        </svg>
+
+                    </div>
+
                 </div>
 
                 <button type="submit">Send your apply</button>
@@ -79,10 +96,12 @@
 
 
         function confirm() {
-            console.log(document.getElementById("name").value);
-            console.log(document.getElementById("e-mail").value);
-            console.log(document.getElementById("phone").value);
-            console.log(document.getElementById("city").value);
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var city = document.getElementById("city").value;
+
 
             var modal = document.getElementById("modal");
             var form = document.getElementById("form");
@@ -93,15 +112,30 @@
             return false;
         }
 
+        function deleteFile() {
+            var file = document.getElementById("file");
+            var upload = document.getElementById("upload");
+            var cv = document.getElementById("cv");
+            
+            cv.value = '';
+            
+            toggle(file, 'none');
+            toggle(upload, 'block');
+        }
+        
         function upload() {
-            console.log(document.getElementById("cv").files[0].name);
-            console.log(document.getElementById("cv").files[0].size);
+            var file = document.getElementById("file");
+            var upload = document.getElementById("upload");
 
-            
-            
+            toggle(file, 'flex');
+            toggle(upload, 'none');
 
-            var element = document.getElementById("file");
-            element.innerHTML = document.getElementById("cv").files[0].name + "<span>" + document.getElementById("cv").files[0].size + "Kb </span>"
+            var element = document.getElementById("filename");
+            element.innerHTML = document.getElementById("cv").files[0].name + "<span>" + parseInt(document.getElementById("cv").files[0].size / 1000, 10) + " Kb </span>"
+        }
+
+        function toggle(element, state) {
+            element.style.display = state;
         }
 
 

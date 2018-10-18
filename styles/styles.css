@@ -4,7 +4,6 @@ body {
 }
 
 body .container {
-  width: 1170px;
   margin: 0 auto;
 }
 
@@ -68,10 +67,6 @@ body .form-wrapper {
   padding-top: 25px;
 }
 
-body .form-wrapper form {
-  width: 335px;
-}
-
 body .form-wrapper form .title {
   font-family: Roboto;
   font-size: 18px;
@@ -113,7 +108,7 @@ body .form-wrapper form .info section input {
 }
 
 body .form-wrapper form .info section input:focus {
-  border-color: #E94C1E;
+  border-color: #828282;
 }
 
 body .form-wrapper form .cv {
@@ -149,26 +144,57 @@ body .form-wrapper form .cv .file-wrapper input {
 
 body .form-wrapper form .cv span {
   font-family: Roboto;
-  font-size: 11px;
+  font-size: 12px;
   color: #828282;
 }
 
 body .form-wrapper form .cv .file {
-  position: relative;
-  margin-top: 40px;
+  display: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .form-wrapper form .cv .file p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   font-family: Roboto;
   font-size: 15px;
   color: #424242;
+  padding-left: 10px;
 }
 
-body .form-wrapper form .cv .file:empty {
-  display: none;
-}
-
-body .form-wrapper form .cv .file span {
+body .form-wrapper form .cv .file p span {
   font-size: 10px;
   margin-left: 5px;
   color: #828282;
+}
+
+body .form-wrapper form .cv .file .clip {
+  width: 13px;
+  height: 15px;
+}
+
+body .form-wrapper form .cv .file .clip path {
+  fill: #E94C1E;
+}
+
+body .form-wrapper form .cv .file .delete {
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+}
+
+body .form-wrapper form .cv .file .delete path {
+  fill: #BBBBBB;
+}
+
+body .form-wrapper form .cv .file .delete:hover path {
+  fill: rgba(187, 187, 187, 0.746);
 }
 
 body .form-wrapper form button {
@@ -261,5 +287,50 @@ body .modal-wrapper .modal a {
 
 body .modal-wrapper .modal a:hover {
   color: #ff5623;
+}
+
+@media (max-width: 575.98px) {
+  .container {
+    width: 100%;
+  }
+  .form-wrapper form {
+    width: 80%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    width: 100%;
+  }
+  .form-wrapper form {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    width: 750px;
+  }
+  .form-wrapper form {
+    width: 60%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container {
+    width: 970px;
+  }
+  .form-wrapper form {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1138px;
+  }
+  .form-wrapper form {
+    width: 40%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
