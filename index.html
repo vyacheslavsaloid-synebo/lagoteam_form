@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="./styles/styles.css">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://unpkg.com/imask"></script>
+   
 </head>
     <body>
         <header>
@@ -168,7 +170,11 @@
 
     <script>
 
-
+        var element = document.getElementById('phone');
+        var maskOptions = {
+            mask: '+{38} (000) 000-00-00'
+        };
+        var mask = new IMask(element, maskOptions);
         function confirm() {
 
             var name = document.getElementById("name").value;
