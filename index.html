@@ -15,7 +15,7 @@
     <body>
         <header>
             <div class="container">
-                <img src="assets/imgs/logo.png" alt="">
+                <img src="assets/imgs/logo.png" alt="lagoteam logo">
                 <div class="info">
                     <h1>Android Developer</h1>
                     <h2>Odessa</h2>
@@ -27,35 +27,35 @@
 
             <form onsubmit="return confirm();">
 
-                <div class="info">
-                    <p class="title">Fill your contact info</p>
-                    <section>
+                <section class="info">
+                    <h3 class="title">Fill your contact info</h3>
+                    <div>
                         <label>Name<input id="name" type="text" minlength="2" maxlength="30" required></label>
-                    </section>  
+                    </div>  
 
-                    <section>
-                        <label>E-mail<input id="email" type="email" ></label>
-                    </section>  
+                    <div>
+                        <label>E-mail<input id="email" type="email" required></label>
+                    </div>  
 
-                    <section>
-                        <label>Phone<input id="phone" type="tel" maxlength="20" minlength="9" required></label>
-                    </section>  
+                    <div>
+                        <label>Phone<input id="phone" type="tel" minlength="19"  maxlength="19" required></label>
+                    </div>  
 
-                    <section>
+                    <div>
                         <label>City<input id="city" type="text" minlength="2" maxlength="10" required></label>
-                    </section>  
-                </div>
+                    </div>  
+                </section>
 
-                <div class="cv">
-                    <p class="title">Attach your CV</p>
-                    <section id="upload">
+                <section class="cv">
+                    <h3 class="title">Attach your CV</h3>
+                    <div id="upload">
                         <label class="file-wrapper">
                             Upload file
-                            <!-- accept=".pdf, .docx, .doc, .odt, .rtf" -->
-                            <input id="cv" type="file"  onchange="upload()" required>
+                            
+                            <input id="cv" type="file"  onchange="upload()" accept=".pdf, .docx, .doc, .odt, .rtf" required>
                         </label>
                         <span>Formats: .pdf, .docx, .doc, .odt, .rtf</span>
-                    </section>
+                    </div>
 
                     <div id="file" class="file">
 
@@ -71,7 +71,7 @@
 
                     </div>
 
-                </div>
+                </section>
 
                 <button type="submit">Send your apply</button>
 
@@ -79,7 +79,7 @@
 
         </div>
 
-        <div class="modal-wrapper" id="modal">
+        <section class="modal-wrapper" id="modal">
             <div class="modal">
                 <div class="img">
                     <div class="icon">
@@ -126,8 +126,7 @@
                                 <rect width="45" height="45" fill="white"/>
                                 </clipPath>
                                 </defs>
-                                </svg>
-                                
+                            </svg>
                     </div>
 
                     <svg class="decoration_1" width="30" height="49" viewBox="0 0 30 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -157,15 +156,13 @@
                         <path d="M12 0H18V6H12V0Z" fill="#F9F9F9" fill-opacity="0.2"/>
                         <path d="M24 12H30V18H24V12Z" fill="#F9F9F9" fill-opacity="0.2"/>
                     </svg>
-                            
-                    <div class="decoration_4"></div>
                 </div>
-                <p class="title">You're about of half step to goal!</p>
-                <p class="description">We will contact you as soon as we review your resume. We are already sure you are brilliant!</p>
+                <h3 class="title">You're about of half step to goal!</h3>
+                <h4 class="description">We will contact you as soon as we review your resume. We are already sure you are brilliant!</h4>
     
-                <a href="#">Back to home</a>
+                <a href="https://www.lagoteam.io/" >Back to home</a>
             </div>
-        </div>
+        </section>
     </body>
 
     <script>
