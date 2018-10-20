@@ -1,10 +1,10 @@
 body {
   background-color: #e5e5e5;
-  padding-top: 72px;
 }
 
 body .container {
   margin: 0 auto;
+  height: 100%;
 }
 
 body header {
@@ -12,14 +12,12 @@ body header {
   left: 0;
   top: 0;
   width: 100%;
-  height: 72px;
   background-color: #fff;
   -webkit-box-shadow: 10px 0px 20px rgba(58, 58, 58, 0.15);
           box-shadow: 10px 0px 20px rgba(58, 58, 58, 0.15);
 }
 
-body header .container {
-  height: 100%;
+body header > .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,25 +29,17 @@ body header .container {
           align-items: center;
 }
 
-body header .container img {
-  width: 143px;
-  height: 40px;
-}
-
-body header .container .info {
+body header > .container > section {
   text-align: right;
 }
 
-body header .container .info h1 {
+body header > .container > section > h1 {
   font-family: Roboto;
-  font-size: 18px;
   color: #424242;
-  margin-bottom: 5px;
 }
 
-body header .container .info h2 {
+body header > .container > section > p {
   font-family: Roboto;
-  font-size: 16px;
   color: #bbb;
 }
 
@@ -64,56 +54,45 @@ body .form-wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 25px;
 }
 
 body .form-wrapper form .title {
   font-family: Roboto;
-  font-size: 18px;
   text-align: center;
   color: #424242;
-  margin-bottom: 20px;
 }
 
 body .form-wrapper form .info {
   width: 100%;
-  padding: 25px 50px;
   background-color: white;
-  margin-bottom: 20px;
   -webkit-box-shadow: 5px 5px 10px rgba(58, 58, 58, 0.1);
           box-shadow: 5px 5px 10px rgba(58, 58, 58, 0.1);
 }
 
-body .form-wrapper form .info div {
-  margin-bottom: 20px;
+body .form-wrapper form .info .input-wrapper {
   width: 100%;
 }
 
-body .form-wrapper form .info div label {
+body .form-wrapper form .info .input-wrapper label {
   font-family: Roboto;
-  font-size: 14px;
   color: #828282;
 }
 
-body .form-wrapper form .info div input {
+body .form-wrapper form .info .input-wrapper input {
   display: block;
   width: 100%;
   background: #fff;
   border: 1px solid #bbb;
   border-radius: 2px;
-  font-size: 14px;
-  padding: 10px;
-  margin-top: 5px;
   color: #424242;
 }
 
-body .form-wrapper form .info div input:focus {
+body .form-wrapper form .info .input-wrapper input:focus {
   border-color: #828282;
 }
 
 body .form-wrapper form .cv {
   width: 100%;
-  padding: 25px 50px;
   background-color: #fff;
   -webkit-box-shadow: 5px 5px 10px rgba(58, 58, 58, 0.1);
           box-shadow: 5px 5px 10px rgba(58, 58, 58, 0.1);
@@ -126,8 +105,6 @@ body .form-wrapper form .cv .file-wrapper {
   border: 1px solid #BBBBBB;
   border-radius: 2px;
   font-family: Roboto;
-  font-size: 14px;
-  padding: 10px;
   color: #828282;
   cursor: pointer;
 }
@@ -144,11 +121,10 @@ body .form-wrapper form .cv .file-wrapper input {
 
 body .form-wrapper form .cv span {
   font-family: Roboto;
-  font-size: 12px;
   color: #828282;
 }
 
-body .form-wrapper form .cv .file {
+body .form-wrapper form .cv #file {
   display: none;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -158,42 +134,31 @@ body .form-wrapper form .cv .file {
           align-items: center;
 }
 
-body .form-wrapper form .cv .file p {
+body .form-wrapper form .cv #file p {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   font-family: Roboto;
-  font-size: 15px;
   color: #424242;
-  padding-left: 10px;
 }
 
-body .form-wrapper form .cv .file p span {
-  font-size: 10px;
-  margin-left: 5px;
+body .form-wrapper form .cv #file p span {
   color: #828282;
 }
 
-body .form-wrapper form .cv .file .clip {
-  width: 13px;
-  height: 15px;
-}
-
-body .form-wrapper form .cv .file .clip path {
+body .form-wrapper form .cv #file .clip path {
   fill: #E94C1E;
 }
 
-body .form-wrapper form .cv .file .delete {
-  width: 8px;
-  height: 8px;
+body .form-wrapper form .cv #file .delete {
   cursor: pointer;
 }
 
-body .form-wrapper form .cv .file .delete path {
+body .form-wrapper form .cv #file .delete path {
   fill: #BBBBBB;
 }
 
-body .form-wrapper form .cv .file .delete:hover path {
+body .form-wrapper form .cv #file .delete:hover path {
   fill: rgba(187, 187, 187, 0.746);
 }
 
@@ -202,9 +167,7 @@ body .form-wrapper form button {
   border-radius: 2px;
   width: 100%;
   color: white;
-  padding: 15px 0px;
   font-family: Roboto;
-  font-size: 14px;
   text-align: center;
   color: #F9F9F9;
   border: none;
@@ -231,19 +194,16 @@ body .modal-wrapper {
 }
 
 body .modal-wrapper .modal {
-  width: 335px;
   background: #fff;
   -webkit-box-shadow: 5px 5px 10px rgba(58, 58, 58, 0.1);
           box-shadow: 5px 5px 10px rgba(58, 58, 58, 0.1);
   border-radius: 2px;
   text-align: center;
-  padding-bottom: 30px;
 }
 
 body .modal-wrapper .modal .img {
   position: relative;
   width: 100%;
-  height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,7 +213,6 @@ body .modal-wrapper .modal .img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 35px;
   background-color: #E94C1E;
 }
 
@@ -267,8 +226,6 @@ body .modal-wrapper .modal .img .icon {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 74px;
-  height: 74px;
   background-color: white;
   border-radius: 50%;
 }
@@ -299,21 +256,16 @@ body .modal-wrapper .modal .img svg.decoration_4 {
 
 body .modal-wrapper .modal .title {
   font-family: Roboto;
-  font-size: 24px;
-  margin-bottom: 20px;
   color: #E94C1E;
 }
 
 body .modal-wrapper .modal .description {
   font-family: Roboto;
-  font-size: 14px;
-  margin-bottom: 35px;
   color: #424242;
 }
 
 body .modal-wrapper .modal a {
   font-family: Roboto;
-  font-size: 14px;
   text-align: center;
   color: #E94C1E;
   cursor: pointer;
@@ -323,50 +275,512 @@ body .modal-wrapper .modal a:hover {
   color: #ff5623;
 }
 
-@media (max-width: 575.98px) {
-  .container {
-    width: 100%;
-    padding: 0px 15px;
+@media (min-width: 1200px) {
+  body {
+    padding-top: 72px;
   }
-  .form-wrapper form {
-    width: 80%;
+  body .container {
+    width: 1138px;
   }
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .container {
-    width: 100%;
-    padding: 0px 15px;
+  body header {
+    height: 72px;
   }
-  .form-wrapper form {
-    width: 80%;
+  body header > .container > img {
+    width: 143px;
+    height: 40px;
   }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .container {
-    width: 750px;
+  body header > .container > section > h1 {
+    font-size: 18px;
+    margin-bottom: 5px;
   }
-  .form-wrapper form {
-    width: 60%;
+  body header > .container > section > h2 {
+    font-size: 16px;
+  }
+  .form-wrapper {
+    padding-top: 25px;
+  }
+  .form-wrapper > form {
+    width: 30%;
+  }
+  .form-wrapper > form .title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .form-wrapper > form > .info {
+    padding: 25px 50px;
+    margin-bottom: 20px;
+  }
+  .form-wrapper > form > .info > .input-wrapper {
+    margin-bottom: 20px;
+  }
+  .form-wrapper > form > .info > .input-wrapper > label {
+    font-size: 14px;
+  }
+  .form-wrapper > form > .info > .input-wrapper > input {
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 5px;
+  }
+  .form-wrapper > form > .cv {
+    padding: 25px 50px;
+  }
+  .form-wrapper > form > .cv > #upload > .file-wrapper {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .form-wrapper > form > .cv > #upload > span {
+    font-size: 12px;
+  }
+  .form-wrapper > form > .cv > #file p {
+    font-size: 15px;
+    padding-left: 10px;
+  }
+  .form-wrapper > form > .cv > #file p span {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+  .form-wrapper > form > .cv > #file > .clip {
+    width: 13px;
+    height: 15px;
+  }
+  .form-wrapper > form > .cv > #file > .delete {
+    width: 8px;
+    height: 8px;
+  }
+  .form-wrapper > form > button {
+    padding: 15px 0px;
+    font-size: 14px;
+  }
+  .modal-wrapper > .modal {
+    width: 335px;
+    padding-bottom: 30px;
+  }
+  .modal-wrapper > .modal > .img {
+    height: 150px;
+    margin-bottom: 35px;
+  }
+  .modal-wrapper > .modal > .img > .icon {
+    width: 74px;
+    height: 74px;
+  }
+  .modal-wrapper > .modal > .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .modal-wrapper > .modal > .description {
+    font-size: 14px;
+    margin-bottom: 35px;
+  }
+  .modal-wrapper > .modal > a {
+    font-size: 14px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  .container {
+  body {
+    padding-top: 72px;
+  }
+  body .container {
     width: 970px;
   }
-  .form-wrapper form {
-    width: 30%;
+  body header {
+    height: 72px;
+  }
+  body header > .container > img {
+    width: 143px;
+    height: 40px;
+  }
+  body header > .container > section > h1 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  body header > .container > section > h2 {
+    font-size: 16px;
+  }
+  .form-wrapper {
+    padding-top: 25px;
+  }
+  .form-wrapper > form {
+    width: 50%;
+  }
+  .form-wrapper > form .title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .form-wrapper > form > .info {
+    padding: 25px 50px;
+    margin-bottom: 20px;
+  }
+  .form-wrapper > form > .info > .input-wrapper {
+    margin-bottom: 20px;
+  }
+  .form-wrapper > form > .info > .input-wrapper > label {
+    font-size: 14px;
+  }
+  .form-wrapper > form > .info > .input-wrapper > input {
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 5px;
+  }
+  .form-wrapper > form > .cv {
+    padding: 25px 50px;
+  }
+  .form-wrapper > form > .cv > #upload > .file-wrapper {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .form-wrapper > form > .cv > #upload > span {
+    font-size: 12px;
+  }
+  .form-wrapper > form > .cv > #file p {
+    font-size: 15px;
+    padding-left: 10px;
+  }
+  .form-wrapper > form > .cv > #file p span {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+  .form-wrapper > form > .cv > #file > .clip {
+    width: 13px;
+    height: 15px;
+  }
+  .form-wrapper > form > .cv > #file > .delete {
+    width: 8px;
+    height: 8px;
+  }
+  .form-wrapper > form > button {
+    padding: 15px 0px;
+    font-size: 14px;
+  }
+  .modal-wrapper > .modal {
+    width: 335px;
+    padding-bottom: 30px;
+  }
+  .modal-wrapper > .modal > .img {
+    height: 150px;
+    margin-bottom: 35px;
+  }
+  .modal-wrapper > .modal > .img > .icon {
+    width: 74px;
+    height: 74px;
+  }
+  .modal-wrapper > .modal > .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .modal-wrapper > .modal > .description {
+    font-size: 14px;
+    margin-bottom: 35px;
+  }
+  .modal-wrapper > .modal > a {
+    font-size: 14px;
   }
 }
 
-@media (min-width: 1200px) {
-  .container {
-    width: 1138px;
+@media (min-width: 768px) and (max-width: 991.98px) {
+  body {
+    padding-top: 72px;
   }
-  .form-wrapper form {
-    width: 30%;
+  body .container {
+    width: 750px;
+  }
+  body header {
+    height: 72px;
+  }
+  body header > .container > img {
+    width: 143px;
+    height: 40px;
+  }
+  body header > .container > section > h1 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  body header > .container > section > h2 {
+    font-size: 16px;
+  }
+  .form-wrapper {
+    padding-top: 25px;
+  }
+  .form-wrapper > form {
+    width: 60%;
+  }
+  .form-wrapper > form .title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .form-wrapper > form > .info {
+    padding: 25px 50px;
+    margin-bottom: 20px;
+  }
+  .form-wrapper > form > .info > .input-wrapper {
+    margin-bottom: 20px;
+  }
+  .form-wrapper > form > .info > .input-wrapper > label {
+    font-size: 14px;
+  }
+  .form-wrapper > form > .info > .input-wrapper > input {
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 5px;
+  }
+  .form-wrapper > form > .cv {
+    padding: 25px 50px;
+  }
+  .form-wrapper > form > .cv > #upload > .file-wrapper {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .form-wrapper > form > .cv > #upload > span {
+    font-size: 12px;
+  }
+  .form-wrapper > form > .cv > #file p {
+    font-size: 15px;
+    padding-left: 10px;
+  }
+  .form-wrapper > form > .cv > #file p span {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+  .form-wrapper > form > .cv > #file > .clip {
+    width: 13px;
+    height: 15px;
+  }
+  .form-wrapper > form > .cv > #file > .delete {
+    width: 8px;
+    height: 8px;
+  }
+  .form-wrapper > form > button {
+    padding: 15px 0px;
+    font-size: 14px;
+  }
+  .modal-wrapper > .modal {
+    width: 335px;
+    padding-bottom: 30px;
+  }
+  .modal-wrapper > .modal > .img {
+    height: 150px;
+    margin-bottom: 35px;
+  }
+  .modal-wrapper > .modal > .img > .icon {
+    width: 74px;
+    height: 74px;
+  }
+  .modal-wrapper > .modal > .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .modal-wrapper > .modal > .description {
+    font-size: 14px;
+    margin-bottom: 35px;
+  }
+  .modal-wrapper > .modal > a {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  body {
+    padding-top: 72px;
+  }
+  body .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+  body header {
+    height: 72px;
+  }
+  body header > .container > img {
+    width: 143px;
+    height: 40px;
+  }
+  body header > .container > section > h1 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  body header > .container > section > h2 {
+    font-size: 16px;
+  }
+  .form-wrapper {
+    padding-top: 25px;
+  }
+  .form-wrapper > form {
+    width: 80%;
+  }
+  .form-wrapper > form .title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .form-wrapper > form > .info {
+    padding: 25px 50px;
+    margin-bottom: 20px;
+  }
+  .form-wrapper > form > .info > .input-wrapper {
+    margin-bottom: 20px;
+  }
+  .form-wrapper > form > .info > .input-wrapper > label {
+    font-size: 14px;
+  }
+  .form-wrapper > form > .info > .input-wrapper > input {
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 5px;
+  }
+  .form-wrapper > form > .cv {
+    padding: 25px 50px;
+  }
+  .form-wrapper > form > .cv > #upload > .file-wrapper {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .form-wrapper > form > .cv > #upload > span {
+    font-size: 12px;
+  }
+  .form-wrapper > form > .cv > #file p {
+    font-size: 15px;
+    padding-left: 10px;
+  }
+  .form-wrapper > form > .cv > #file p span {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+  .form-wrapper > form > .cv > #file > .clip {
+    width: 13px;
+    height: 15px;
+  }
+  .form-wrapper > form > .cv > #file > .delete {
+    width: 8px;
+    height: 8px;
+  }
+  .form-wrapper > form > button {
+    padding: 15px 0px;
+    font-size: 14px;
+  }
+  .modal-wrapper > .modal {
+    width: 335px;
+    padding-bottom: 30px;
+  }
+  .modal-wrapper > .modal > .img {
+    height: 150px;
+    margin-bottom: 35px;
+  }
+  .modal-wrapper > .modal > .img > .icon {
+    width: 74px;
+    height: 74px;
+  }
+  .modal-wrapper > .modal > .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .modal-wrapper > .modal > .description {
+    font-size: 14px;
+    margin-bottom: 35px;
+  }
+  .modal-wrapper > .modal > a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  body {
+    padding-top: 72px;
+  }
+  body .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+  body header {
+    height: 72px;
+  }
+  body header > .container > img {
+    width: 143px;
+    height: 40px;
+  }
+  body header > .container > section > h1 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  body header > .container > section > h2 {
+    font-size: 16px;
+  }
+  .form-wrapper {
+    padding-top: 25px;
+  }
+  .form-wrapper > form {
+    width: 95%;
+  }
+  .form-wrapper > form .title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .form-wrapper > form > .info {
+    padding: 25px 15px;
+    margin-bottom: 20px;
+  }
+  .form-wrapper > form > .info > .input-wrapper {
+    margin-bottom: 20px;
+  }
+  .form-wrapper > form > .info > .input-wrapper > label {
+    font-size: 14px;
+  }
+  .form-wrapper > form > .info > .input-wrapper > input {
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 5px;
+  }
+  .form-wrapper > form > .cv {
+    padding: 25px 15px;
+  }
+  .form-wrapper > form > .cv > #upload > .file-wrapper {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .form-wrapper > form > .cv > #upload > span {
+    font-size: 12px;
+  }
+  .form-wrapper > form > .cv > #file p {
+    font-size: 15px;
+    padding-left: 10px;
+  }
+  .form-wrapper > form > .cv > #file p span {
+    font-size: 10px;
+    margin-left: 5px;
+  }
+  .form-wrapper > form > .cv > #file > .clip {
+    width: 13px;
+    height: 15px;
+  }
+  .form-wrapper > form > .cv > #file > .delete {
+    width: 8px;
+    height: 8px;
+  }
+  .form-wrapper > form > button {
+    padding: 15px 0px;
+    font-size: 14px;
+  }
+  .modal-wrapper > .modal {
+    width: 95%;
+    padding-bottom: 30px;
+  }
+  .modal-wrapper > .modal > .img {
+    height: 150px;
+    margin-bottom: 35px;
+  }
+  .modal-wrapper > .modal > .img > .icon {
+    width: 74px;
+    height: 74px;
+  }
+  .modal-wrapper > .modal > .title {
+    padding: 0 15px;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .modal-wrapper > .modal > .description {
+    padding: 0 15px;
+    font-size: 14px;
+    margin-bottom: 35px;
+  }
+  .modal-wrapper > .modal > a {
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

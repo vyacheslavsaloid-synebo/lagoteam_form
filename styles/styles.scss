@@ -1,10 +1,9 @@
 body{
     background-color: #e5e5e5;
-    padding-top: 72px; 
-    .container{
-        margin: 0 auto;
+    .container{ 
+        margin: 0 auto; 
+        height: 100%;
     }
-    
     header{
         position: fixed;
 
@@ -12,32 +11,21 @@ body{
         top: 0;
         
         width: 100%;
-        height: 72px;
-
 
         background-color: #fff;
         box-shadow: 10px 0px 20px rgba(58, 58, 58, 0.15);
-        .container{
-            height: 100%;
-
+        >.container{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            img{
-                width: 143px;
-                height: 40px;
-            }
-            .info{
+            >section{
                 text-align: right;
-                h1{
+                >h1{
                     font-family: Roboto;
-                    font-size: 18px;
                     color: #424242;
-                    margin-bottom: 5px;
                 }
-                h2{
+                >p{
                     font-family: Roboto;
-                    font-size: 16px;
                     color: #bbb;
                 }
             }
@@ -49,28 +37,20 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 25px;
         form{
             .title{
                 font-family: Roboto;
-                font-size: 18px;
                 text-align: center;
                 color: #424242;
-
-                margin-bottom: 20px;
             }
             .info{
                 width: 100%;
-                padding: 25px 50px;
-                background-color: white;
-                margin-bottom: 20px;
+                background-color: white;    
                 box-shadow: 5px 5px 10px rgba(58, 58, 58, 0.1);
-                div{
-                    margin-bottom: 20px;
+                .input-wrapper{
                     width: 100%;
                     label{
                         font-family: Roboto;
-                        font-size: 14px;
                         color: #828282;
                     }
                     input{
@@ -79,11 +59,6 @@ body{
                         background: #fff;
                         border: 1px solid #bbb;  
                         border-radius: 2px;
-                        font-size: 14px;
-                        padding: 10px;
-    
-                        margin-top: 5px;
-
                         color: #424242;
                         &:focus{ border-color: #828282 }
                     }
@@ -91,7 +66,6 @@ body{
             }
             .cv{
                 width: 100%;
-                padding: 25px 50px;
                 background-color: #fff;
                 box-shadow: 5px 5px 10px rgba(58, 58, 58, 0.1);
                 .file-wrapper{
@@ -104,10 +78,6 @@ body{
                     border-radius: 2px;
 
                     font-family: Roboto;
-                    font-size: 14px;
-
-                    padding: 10px;
-
                     color: #828282;
 
                     cursor: pointer;    
@@ -123,33 +93,20 @@ body{
                 }
                 span {
                     font-family: Roboto;
-                    font-size: 12px;
                     color: #828282;
                 }
-                .file{
+                #file{
                     display: none;
                     justify-content: space-between;
                     align-items: center; 
                     p{
                         flex: 1;
                         font-family: Roboto;
-                        font-size: 15px;
                         color: #424242;
-                        padding-left: 10px;
-                        span {
-                            font-size: 10px;
-                            margin-left: 5px;
-                            color: #828282;
-                        }
+                        span { color: #828282; }
                     }
-                    .clip {
-                        width: 13px;
-                        height: 15px;
-                        path { fill: #E94C1E;  }
-                    }
+                    .clip path { fill: #E94C1E;  }
                     .delete  {
-                        width: 8px;
-                        height: 8px;
                         cursor: pointer;
                         path { fill: #BBBBBB;  }
                         &:hover path{  fill: rgba(187, 187, 187, 0.746); }
@@ -162,19 +119,14 @@ body{
                 width: 100%;
                 color: white;
 
-                padding: 15px 0px;
-
                 font-family: Roboto;
-                font-size: 14px;
                 text-align: center;
 
                 color: #F9F9F9;
                 
                 border: none;
                 cursor: pointer;
-                &:hover{
-                    background-color: rgb(255, 86, 35);
-                }
+                &:hover{ background-color: rgb(255, 86, 35);  }
             }
         }
     }
@@ -192,28 +144,21 @@ body{
         align-items: center;
 
         .modal{
-            width: 335px;
             background: #fff;
             box-shadow: 5px 5px 10px rgba(58, 58, 58, 0.1);
             border-radius: 2px;
             text-align: center;
-            padding-bottom: 30px;
             .img{
                 position: relative;
                 width: 100%;
-                height: 150px;
 
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
-                margin-bottom: 35px;
                 .icon{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 74px;
-                    height: 74px;
                     background-color: white;
                     border-radius: 50%;
                 }
@@ -241,23 +186,14 @@ body{
             }
             .title{
                 font-family: Roboto;
-                font-size: 24px;
-
-                margin-bottom: 20px;
-
                 color: #E94C1E;
             }
             .description{
                 font-family: Roboto;
-                font-size: 14px;
-
-                margin-bottom: 35px;
-
                 color: #424242;
             }
             a{
                 font-family: Roboto;
-                font-size: 14px;
                 text-align: center;
 
                 color: #E94C1E;
@@ -271,55 +207,537 @@ body{
 }
 
 
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) { 
-    .container {
-        width: 100%;
-        padding: 0px 15px;
-    }
-    .form-wrapper form {
-        width: 80%;
-    }
-}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    body{
+        padding-top: 72px; 
+        .container{ width: 1138px; }
+        header{
+            height: 72px;
+            >.container{
+                >img{
+                    width: 143px;
+                    height: 40px;
+                }
+                >section{
+                    >h1{
+                        font-size: 18px;
+                        margin-bottom: 5px;
+                    }
+                    >h2{ font-size: 16px; }
+                }
+            }
+        }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) and (max-width: 767.98px) { 
-    .container {
-        width: 100%;
-        padding: 0px 15px;
     }
-    .form-wrapper form {
-        width: 80%;
+    .form-wrapper {
+        padding-top: 25px;
+        >form {
+            width: 30%;
+            .title {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+            >.info  {
+                padding: 25px 50px;
+                margin-bottom: 20px;
+                >.input-wrapper {
+                    margin-bottom: 20px;
+                    >label { font-size: 14px; }
+                    >input {
+                        font-size: 14px;
+                        padding: 10px;
+                        margin-top: 5px;
+                    }
+                }
+            }
+            >.cv {
+                padding: 25px 50px;
+                >#upload {  
+                    >.file-wrapper {
+                        font-size: 14px;
+                        padding: 10px;
+                    }
+                    >span{
+                        font-size: 12px;
+                    }
+                }
+                >#file {
+                    p {
+                        font-size: 15px;
+                        padding-left: 10px;
+                        span {
+                            font-size: 10px;
+                            margin-left: 5px;
+                        }
+                    }
+                    >.clip {
+                        width: 13px;
+                        height: 15px;
+                    }
+                    >.delete {
+                        width: 8px;
+                        height: 8px;
+                    }
+                }
+            }
+            >button{
+                padding: 15px 0px;
+                font-size: 14px;
+            }
+        }
     }
-
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991.98px) { 
-    .container {
-        width: 750px;
-    }
-    .form-wrapper form {
-        width: 60%;
+    .modal-wrapper >.modal {
+        width: 335px;
+        padding-bottom: 30px;
+        >.img {
+            height: 150px;
+            margin-bottom: 35px;
+            >.icon { 
+                width: 74px;
+                height: 74px;
+            }
+        }
+        >.title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        >.description {
+            font-size: 14px;
+            margin-bottom: 35px;
+        }
+        >a {
+            font-size: 14px;
+        }
     }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199.98px) {
-    .container{
-        width: 970px;
-    }
-    .form-wrapper form {
-        width: 30%;
-    }
- }
+    body{
+        padding-top: 72px; 
+        .container{ width: 970px; }
+        header{
+            height: 72px;
+            >.container{
+                >img{
+                    width: 143px;
+                    height: 40px;
+                }
+                >section{
+                    >h1{
+                        font-size: 18px;
+                        margin-bottom: 5px;
+                    }
+                    >h2{ font-size: 16px; }
+                }
+            }
+        }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-    .container{
-        width: 1138px;
     }
-    .form-wrapper form {
-        width: 30%;
+    .form-wrapper {
+        padding-top: 25px;
+        >form {
+            width: 50%;
+            .title {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+            >.info  {
+                padding: 25px 50px;
+                margin-bottom: 20px;
+                >.input-wrapper {
+                    margin-bottom: 20px;
+                    >label { font-size: 14px; }
+                    >input {
+                        font-size: 14px;
+                        padding: 10px;
+                        margin-top: 5px;
+                    }
+                }
+            }
+            >.cv {
+                padding: 25px 50px;
+                >#upload {  
+                    >.file-wrapper {
+                        font-size: 14px;
+                        padding: 10px;
+                    }
+                    >span{
+                        font-size: 12px;
+                    }
+                }
+                >#file {
+                    p {
+                        font-size: 15px;
+                        padding-left: 10px;
+                        span {
+                            font-size: 10px;
+                            margin-left: 5px;
+                        }
+                    }
+                    >.clip {
+                        width: 13px;
+                        height: 15px;
+                    }
+                    >.delete {
+                        width: 8px;
+                        height: 8px;
+                    }
+                }
+            }
+            >button{
+                padding: 15px 0px;
+                font-size: 14px;
+            }
+        }
+    }
+    .modal-wrapper >.modal {
+        width: 335px;
+        padding-bottom: 30px;
+        >.img {
+            height: 150px;
+            margin-bottom: 35px;
+            >.icon { 
+                width: 74px;
+                height: 74px;
+            }
+        }
+        >.title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        >.description {
+            font-size: 14px;
+            margin-bottom: 35px;
+        }
+        >a {
+            font-size: 14px;
+        }
+    }
+}
+
+ // Medium devices (tablets, 768px and up)
+ @media (min-width: 768px) and (max-width: 991.98px) { 
+    body{
+        padding-top: 72px; 
+        .container{ width: 750px; }
+        header{
+            height: 72px;
+            >.container{
+                >img{
+                    width: 143px;
+                    height: 40px;
+                }
+                >section{
+                    >h1{
+                        font-size: 18px;
+                        margin-bottom: 5px;
+                    }
+                    >h2{ font-size: 16px; }
+                }
+            }
+        }
+
+    }
+    .form-wrapper {
+        padding-top: 25px;
+        >form {
+            width: 60%;
+            .title {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+            >.info  {
+                padding: 25px 50px;
+                margin-bottom: 20px;
+                >.input-wrapper {
+                    margin-bottom: 20px;
+                    >label { font-size: 14px; }
+                    >input {
+                        font-size: 14px;
+                        padding: 10px;
+                        margin-top: 5px;
+                    }
+                }
+            }
+            >.cv {
+                padding: 25px 50px;
+                >#upload {  
+                    >.file-wrapper {
+                        font-size: 14px;
+                        padding: 10px;
+                    }
+                    >span{
+                        font-size: 12px;
+                    }
+                }
+                >#file {
+                    p {
+                        font-size: 15px;
+                        padding-left: 10px;
+                        span {
+                            font-size: 10px;
+                            margin-left: 5px;
+                        }
+                    }
+                    >.clip {
+                        width: 13px;
+                        height: 15px;
+                    }
+                    >.delete {
+                        width: 8px;
+                        height: 8px;
+                    }
+                }
+            }
+            >button{
+                padding: 15px 0px;
+                font-size: 14px;
+            }
+        }
+    }
+    .modal-wrapper >.modal {
+        width: 335px;
+        padding-bottom: 30px;
+        >.img {
+            height: 150px;
+            margin-bottom: 35px;
+            >.icon { 
+                width: 74px;
+                height: 74px;
+            }
+        }
+        >.title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        >.description {
+            font-size: 14px;
+            margin-bottom: 35px;
+        }
+        >a {
+            font-size: 14px;
+        }
+    }
+}
+ 
+ // Small devices (landscape phones, 576px and up)
+ @media (min-width: 576px) and (max-width: 767.98px) { 
+    body{
+        padding-top: 72px; 
+        .container{ 
+            width: 100%; 
+            padding: 0 15px;
+        }
+        header{
+            height: 72px;
+            >.container{
+                >img{
+                    width: 143px;
+                    height: 40px;
+                }
+                >section{
+                    >h1{
+                        font-size: 18px;
+                        margin-bottom: 5px;
+                    }
+                    >h2{ font-size: 16px; }
+                }
+            }
+        }
+
+    }
+    .form-wrapper {
+        padding-top: 25px;
+        >form {
+            width: 80%;
+            .title {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+            >.info  {
+                padding: 25px 50px;
+                margin-bottom: 20px;
+                >.input-wrapper {
+                    margin-bottom: 20px;
+                    >label { font-size: 14px; }
+                    >input {
+                        font-size: 14px;
+                        padding: 10px;
+                        margin-top: 5px;
+                    }
+                }
+            }
+            >.cv {
+                padding: 25px 50px;
+                >#upload {  
+                    >.file-wrapper {
+                        font-size: 14px;
+                        padding: 10px;
+                    }
+                    >span{
+                        font-size: 12px;
+                    }
+                }
+                >#file {
+                    p {
+                        font-size: 15px;
+                        padding-left: 10px;
+                        span {
+                            font-size: 10px;
+                            margin-left: 5px;
+                        }
+                    }
+                    >.clip {
+                        width: 13px;
+                        height: 15px;
+                    }
+                    >.delete {
+                        width: 8px;
+                        height: 8px;
+                    }
+                }
+            }
+            >button{
+                padding: 15px 0px;
+                font-size: 14px;
+            }
+        }
+    }
+    .modal-wrapper >.modal {
+        width: 335px;
+        padding-bottom: 30px;
+        >.img {
+            height: 150px;
+            margin-bottom: 35px;
+            >.icon { 
+                width: 74px;
+                height: 74px;
+            }
+        }
+        >.title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        >.description {
+            font-size: 14px;
+            margin-bottom: 35px;
+        }
+        >a {
+            font-size: 14px;
+        }
+    }
+}
+ 
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    body{
+        padding-top: 72px; 
+        .container{ 
+            width: 100%; 
+            padding: 0 15px;
+        }
+        header{
+            height: 72px;
+            >.container{
+                >img{
+                    width: 143px;
+                    height: 40px;
+                }
+                >section{
+                    >h1{
+                        font-size: 18px;
+                        margin-bottom: 5px;
+                    }
+                    >h2{ font-size: 16px; }
+                }
+            }
+        }
+
+    }
+    .form-wrapper {
+        padding-top: 25px;
+        >form {
+            width: 95%;
+            .title {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+            >.info  {
+                padding: 25px 15px;
+                margin-bottom: 20px;
+                >.input-wrapper {
+                    margin-bottom: 20px;
+                    >label { font-size: 14px; }
+                    >input {
+                        font-size: 14px;
+                        padding: 10px;
+                        margin-top: 5px;
+                    }
+                }
+            }
+            >.cv {
+                padding: 25px 15px;
+                >#upload {  
+                    >.file-wrapper {
+                        font-size: 14px;
+                        padding: 10px;
+                    }
+                    >span{
+                        font-size: 12px;
+                    }
+                }
+                >#file {
+                    p {
+                        font-size: 15px;
+                        padding-left: 10px;
+                        span {
+                            font-size: 10px;
+                            margin-left: 5px;
+                        }
+                    }
+                    >.clip {
+                        width: 13px;
+                        height: 15px;
+                    }
+                    >.delete {
+                        width: 8px;
+                        height: 8px;
+                    }
+                }
+            }
+            >button{
+                padding: 15px 0px;
+                font-size: 14px;
+            }
+        }
+    }
+    .modal-wrapper >.modal {
+        width: 95%;
+        padding-bottom: 30px;
+        >.img {
+            height: 150px;
+            margin-bottom: 35px;
+            >.icon { 
+                width: 74px;
+                height: 74px;
+            }
+        }
+        >.title {
+            padding: 0 15px;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        >.description {
+            padding: 0 15px;
+            font-size: 14px;
+            margin-bottom: 35px;
+        }
+        >a {
+            font-size: 14px;
+        }
     }
 }

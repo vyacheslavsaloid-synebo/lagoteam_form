@@ -9,55 +9,58 @@
     <link rel="stylesheet" type="text/css" href="./styles/styles.css">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <script src="https://unpkg.com/imask"></script>
+    <script src="./libs/imask.min.js"></script>
    
 </head>
     <body>
         <header>
             <div class="container">
                 <img src="assets/imgs/logo.png" alt="lagoteam logo">
-                <div class="info">
+                <section>
                     <h1>Android Developer</h1>
-                    <h2>Odessa</h2>
-                </div>
+                    <p>Odessa</p>
+                </section>
             </div>
         </header>
     
-        <div class="form-wrapper" id="form">
+        <section class="form-wrapper" id="form">
 
             <form onsubmit="return confirm();">
 
                 <section class="info">
-                    <h3 class="title">Fill your contact info</h3>
-                    <div>
-                        <label>Name<input id="name" type="text" minlength="2" maxlength="30" required></label>
+                    <h2 class="title">Fill your contact info</h2>
+                    <div class="input-wrapper">
+                        <label for="name">Name</label>
+                        <input id="name" type="text" minlength="2" maxlength="30" required>
                     </div>  
 
-                    <div>
-                        <label>E-mail<input id="email" type="email" required></label>
+                    <div class="input-wrapper">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" required>
                     </div>  
 
-                    <div>
-                        <label>Phone<input id="phone" type="tel" minlength="19"  maxlength="19" required></label>
+                    <div class="input-wrapper">
+                        <label for="phone">Phone</label>
+                        <input id="phone" type="tel" minlength="19"  maxlength="19" required>
                     </div>  
 
-                    <div>
-                        <label>City<input id="city" type="text" minlength="2" maxlength="10" required></label>
+                    <div class="input-wrapper">
+                        <label for="city">City</label>
+                        <input id="city" type="text" minlength="2" maxlength="10" required>
                     </div>  
                 </section>
 
                 <section class="cv">
-                    <h3 class="title">Attach your CV</h3>
+                    <h2 class="title">Attach your CV</h2>
                     <div id="upload">
                         <label class="file-wrapper">
-                            Upload file
-                            
-                            <input id="cv" type="file"  onchange="upload()" accept=".pdf, .docx, .doc, .odt, .rtf" required>
+                            Upload file 
+                            <input id="cv" type="file" accept=".pdf, .docx, .doc, .odt, .rtf" onchange="upload()" required>
                         </label>
                         <span>Formats: .pdf, .docx, .doc, .odt, .rtf</span>
                     </div>
 
-                    <div id="file" class="file">
+                    <div id="file">
 
                         <svg class="clip" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6.60465 8.23253C6.41861 8.41857 6.41861 8.7209 6.60465 8.90694C6.7907 9.09299 7.09302 9.09299 7.27907 8.90694L9.80233 6.38369C10.2326 5.95346 10.4651 5.39532 10.4651 4.79067C10.4651 4.18601 10.2326 3.62788 9.80233 3.19764C8.91861 2.31392 7.48837 2.31392 6.61628 3.19764L0.918605 8.89532C0.325582 9.48834 1.30184e-06 10.279 1.22865e-06 11.1162C1.15546e-06 11.9535 0.325582 12.7442 0.918605 13.3372C2.15116 14.5697 4.13954 14.5697 5.37209 13.3372L11.0581 7.65113C11.8256 6.88369 12.2442 5.87206 12.2442 4.79067C12.2442 3.70927 11.8256 2.68602 11.0581 1.9302C10.2907 1.16276 9.27907 0.744155 8.19768 0.744155C7.11628 0.744154 6.09302 1.16276 5.33721 1.9302L2.81396 4.45346C2.62791 4.6395 2.62791 4.94183 2.81396 5.12787C3 5.31392 3.30233 5.31392 3.48837 5.12787L6.01163 2.60462C6.59302 2.02322 7.37209 1.69764 8.19768 1.69764C9.02326 1.69764 9.80233 2.02322 10.3837 2.60462C10.9651 3.18602 11.2907 3.96508 11.2907 4.79067C11.2907 5.61625 10.9651 6.39532 10.3837 6.97671L4.69767 12.6628C4.27907 13.0814 3.73256 13.3023 3.15116 13.3023C2.56977 13.3023 2.01163 13.0697 1.60465 12.6628C1.18605 12.2442 0.965118 11.6976 0.965118 11.1162C0.965118 10.5349 1.19768 9.97671 1.60465 9.56974L7.30233 3.87206C7.80233 3.37206 8.62791 3.37206 9.13954 3.87206C9.38372 4.11625 9.52326 4.44183 9.52326 4.79067C9.52326 5.1395 9.38372 5.46508 9.13954 5.70927L6.60465 8.23253Z"/>
@@ -77,56 +80,56 @@
 
             </form>
 
-        </div>
+        </section>
 
-        <div class="modal-wrapper" id="modal">
-            <section class="modal">
+        <section class="modal-wrapper" id="modal">
+            <div class="modal">
                 <div class="img">
                     <div class="icon">
-                            <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0)">
-                                <path d="M21.7955 31.1833H24.0834V33.4716H21.7955V31.1833Z" fill="#EA6B65"/>
-                                <path d="M22.5573 5.20619L28.6936 0.676392L31.8641 4.9717L25.7283 9.5015L22.5573 5.20619Z" fill="#DC4D41"/>
-                                <path d="M14.9311 12.8781H17.9818V17.4545H14.9311V12.8781Z" fill="#F9D7C0"/>
-                                <path d="M12.6429 15.1663L9.5921 12.1155L8.38223 7.88233C8.19512 7.22796 7.59706 6.77683 6.91625 6.77649C6.07408 6.77718 5.39155 7.46073 5.39224 8.30325C5.39224 8.4138 5.40426 8.524 5.42829 8.63215L6.54134 13.6409L12.6429 18.9799H13.4057V15.1663H12.6429Z" fill="#F9D7C0"/>
-                                <path d="M20.2701 15.1807L24.7058 14.4494L28.138 11.6897C28.6685 11.263 29.4176 11.2393 29.9741 11.6317C30.6618 12.1182 30.8249 13.0702 30.3384 13.7583C30.2745 13.8486 30.2007 13.9316 30.119 14.0061L26.3174 17.4545L20.2701 18.2932L19.5072 18.1981V15.147L20.2701 15.1807Z" fill="#F9D7C0"/>
-                                <path d="M31.619 18.2393C31.3766 18.2397 31.1483 18.1247 31.0045 17.9297L21.948 5.65759C21.698 5.31839 21.7701 4.84082 22.1093 4.59088C22.4485 4.34095 22.9257 4.41304 23.176 4.75225L32.2363 17.0243C32.4859 17.3635 32.4135 17.8411 32.0743 18.0907C31.9445 18.1865 31.7872 18.2383 31.6259 18.2393H31.619Z" fill="#D9D9D9"/>
-                                <path d="M34.7614 32.7086H36.2868V34.234H34.7614V32.7086Z" fill="#FBD699"/>
-                                <path d="M34.7614 29.6578H36.2868V31.1832H34.7614V29.6578Z" fill="#FBD699"/>
-                                <path d="M3.49021 41.0984H5.01559V42.6238H3.49021V41.0984Z" fill="#FBD699"/>
-                                <path d="M3.49021 38.0477H5.01559V39.5731H3.49021V38.0477Z" fill="#FBD699"/>
-                                <path d="M34.7614 25.0814H36.2868V26.6071H34.7614V25.0814Z" fill="#FBD699"/>
-                                <path d="M32.4735 22.7935H33.9989V24.3188H32.4735V22.7935Z" fill="#FBD699"/>
-                                <path d="M34.7614 20.5052H36.2868V22.0306H34.7614V20.5052Z" fill="#FBD699"/>
-                                <path d="M37.0496 22.7935H38.575V24.3188H37.0496V22.7935Z" fill="#FBD699"/>
-                                <path d="M3.49021 33.4716H5.01559V34.997H3.49021V33.4716Z" fill="#F27E55"/>
-                                <path d="M3.49021 30.4204H5.01559V31.9461H3.49021V30.4204Z" fill="#FBB540"/>
-                                <path d="M0.439423 30.4204H1.96481V31.9461H0.439423V30.4204Z" fill="#F27E55"/>
-                                <path d="M3.49021 27.3698H5.01559V28.8951H3.49021V27.3698Z" fill="#F27E55"/>
-                                <path d="M6.54133 30.4204H8.06671V31.9461H6.54133V30.4204Z" fill="#F27E55"/>
-                                <path d="M40.8633 6.01367H42.3887V7.5394H40.8633V6.01367Z" fill="#99D8AA"/>
-                                <path d="M38.575 8.30188H40.1004V9.82726H38.575V8.30188Z" fill="#99D8AA"/>
-                                <path d="M43.1512 8.30188H44.6766V9.82726H43.1512V8.30188Z" fill="#99D8AA"/>
-                                <path d="M40.8633 10.5901H42.3887V12.1155H40.8633V10.5901Z" fill="#99D8AA"/>
-                                <path d="M8.06669 -0.0878906H9.59207V1.43749H8.06669V-0.0878906Z" fill="#F27E55"/>
-                                <path d="M6.54133 1.4375H8.06671V2.96288H6.54133V1.4375Z" fill="#F27E55"/>
-                                <path d="M9.59211 1.4375H11.1175V2.96288H9.59211V1.4375Z" fill="#F27E55"/>
-                                <path d="M8.06669 2.96289H9.59207V4.48827H8.06669V2.96289Z" fill="#F27E55"/>
-                                <path d="M22.6391 14.8072L20.2702 15.1975V15.1663H12.6429L11.202 13.7257L9.32295 16.0747L12.6429 18.9799V24.319H20.2702V18.3125L23.2567 17.8978L22.6391 14.8072Z" fill="#FBB540"/>
-                                <path d="M12.6428 23.556V34.9969H15.6936V26.6071H19.5072V29.6579H22.558V25.8443C22.558 24.5805 21.5335 23.556 20.2701 23.556H12.6428Z" fill="#277BAA"/>
-                                <path d="M17.219 38.0478H12.6428V34.2341H15.6936C16.5361 34.2341 17.219 34.917 17.219 35.7595V38.0478Z" fill="#EA6B65"/>
-                                <path d="M19.5072 28.895H22.558C23.4005 28.895 24.0834 29.5779 24.0834 30.4204V31.9461H19.5072V28.895Z" fill="#EA6B65"/>
-                                <path d="M13.4057 7.53943H19.5073V10.5902C19.5073 12.2752 18.1415 13.641 16.4565 13.641C14.7715 13.641 13.4054 12.2752 13.4054 10.5902V7.53943H13.4057Z" fill="#F9D7C0"/>
-                                <path d="M19.5073 9.06477L14.9311 7.53939L13.4057 9.06477V7.53939C13.4057 5.85436 14.7715 4.48828 16.4565 4.48828C18.1415 4.48828 19.5073 5.85436 19.5073 7.53939V9.06477Z" fill="#834B10"/>
-                                <path d="M43.9141 44.9121H32.4735L27.897 36.5223H35.5243L37.9512 40.336H41.6258L43.9141 44.9121Z" fill="#428DC5"/>
-                                <path d="M5.77845 44.9121L10.3546 37.2848H17.9819L21.7955 31.9462H29.4224L32.4735 44.9121H5.77845Z" fill="#4799CF"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0">
-                                <rect width="45" height="45" fill="white"/>
-                                </clipPath>
-                                </defs>
-                            </svg>
+                        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0)">
+                            <path d="M21.7955 31.1833H24.0834V33.4716H21.7955V31.1833Z" fill="#EA6B65"/>
+                            <path d="M22.5573 5.20619L28.6936 0.676392L31.8641 4.9717L25.7283 9.5015L22.5573 5.20619Z" fill="#DC4D41"/>
+                            <path d="M14.9311 12.8781H17.9818V17.4545H14.9311V12.8781Z" fill="#F9D7C0"/>
+                            <path d="M12.6429 15.1663L9.5921 12.1155L8.38223 7.88233C8.19512 7.22796 7.59706 6.77683 6.91625 6.77649C6.07408 6.77718 5.39155 7.46073 5.39224 8.30325C5.39224 8.4138 5.40426 8.524 5.42829 8.63215L6.54134 13.6409L12.6429 18.9799H13.4057V15.1663H12.6429Z" fill="#F9D7C0"/>
+                            <path d="M20.2701 15.1807L24.7058 14.4494L28.138 11.6897C28.6685 11.263 29.4176 11.2393 29.9741 11.6317C30.6618 12.1182 30.8249 13.0702 30.3384 13.7583C30.2745 13.8486 30.2007 13.9316 30.119 14.0061L26.3174 17.4545L20.2701 18.2932L19.5072 18.1981V15.147L20.2701 15.1807Z" fill="#F9D7C0"/>
+                            <path d="M31.619 18.2393C31.3766 18.2397 31.1483 18.1247 31.0045 17.9297L21.948 5.65759C21.698 5.31839 21.7701 4.84082 22.1093 4.59088C22.4485 4.34095 22.9257 4.41304 23.176 4.75225L32.2363 17.0243C32.4859 17.3635 32.4135 17.8411 32.0743 18.0907C31.9445 18.1865 31.7872 18.2383 31.6259 18.2393H31.619Z" fill="#D9D9D9"/>
+                            <path d="M34.7614 32.7086H36.2868V34.234H34.7614V32.7086Z" fill="#FBD699"/>
+                            <path d="M34.7614 29.6578H36.2868V31.1832H34.7614V29.6578Z" fill="#FBD699"/>
+                            <path d="M3.49021 41.0984H5.01559V42.6238H3.49021V41.0984Z" fill="#FBD699"/>
+                            <path d="M3.49021 38.0477H5.01559V39.5731H3.49021V38.0477Z" fill="#FBD699"/>
+                            <path d="M34.7614 25.0814H36.2868V26.6071H34.7614V25.0814Z" fill="#FBD699"/>
+                            <path d="M32.4735 22.7935H33.9989V24.3188H32.4735V22.7935Z" fill="#FBD699"/>
+                            <path d="M34.7614 20.5052H36.2868V22.0306H34.7614V20.5052Z" fill="#FBD699"/>
+                            <path d="M37.0496 22.7935H38.575V24.3188H37.0496V22.7935Z" fill="#FBD699"/>
+                            <path d="M3.49021 33.4716H5.01559V34.997H3.49021V33.4716Z" fill="#F27E55"/>
+                            <path d="M3.49021 30.4204H5.01559V31.9461H3.49021V30.4204Z" fill="#FBB540"/>
+                            <path d="M0.439423 30.4204H1.96481V31.9461H0.439423V30.4204Z" fill="#F27E55"/>
+                            <path d="M3.49021 27.3698H5.01559V28.8951H3.49021V27.3698Z" fill="#F27E55"/>
+                            <path d="M6.54133 30.4204H8.06671V31.9461H6.54133V30.4204Z" fill="#F27E55"/>
+                            <path d="M40.8633 6.01367H42.3887V7.5394H40.8633V6.01367Z" fill="#99D8AA"/>
+                            <path d="M38.575 8.30188H40.1004V9.82726H38.575V8.30188Z" fill="#99D8AA"/>
+                            <path d="M43.1512 8.30188H44.6766V9.82726H43.1512V8.30188Z" fill="#99D8AA"/>
+                            <path d="M40.8633 10.5901H42.3887V12.1155H40.8633V10.5901Z" fill="#99D8AA"/>
+                            <path d="M8.06669 -0.0878906H9.59207V1.43749H8.06669V-0.0878906Z" fill="#F27E55"/>
+                            <path d="M6.54133 1.4375H8.06671V2.96288H6.54133V1.4375Z" fill="#F27E55"/>
+                            <path d="M9.59211 1.4375H11.1175V2.96288H9.59211V1.4375Z" fill="#F27E55"/>
+                            <path d="M8.06669 2.96289H9.59207V4.48827H8.06669V2.96289Z" fill="#F27E55"/>
+                            <path d="M22.6391 14.8072L20.2702 15.1975V15.1663H12.6429L11.202 13.7257L9.32295 16.0747L12.6429 18.9799V24.319H20.2702V18.3125L23.2567 17.8978L22.6391 14.8072Z" fill="#FBB540"/>
+                            <path d="M12.6428 23.556V34.9969H15.6936V26.6071H19.5072V29.6579H22.558V25.8443C22.558 24.5805 21.5335 23.556 20.2701 23.556H12.6428Z" fill="#277BAA"/>
+                            <path d="M17.219 38.0478H12.6428V34.2341H15.6936C16.5361 34.2341 17.219 34.917 17.219 35.7595V38.0478Z" fill="#EA6B65"/>
+                            <path d="M19.5072 28.895H22.558C23.4005 28.895 24.0834 29.5779 24.0834 30.4204V31.9461H19.5072V28.895Z" fill="#EA6B65"/>
+                            <path d="M13.4057 7.53943H19.5073V10.5902C19.5073 12.2752 18.1415 13.641 16.4565 13.641C14.7715 13.641 13.4054 12.2752 13.4054 10.5902V7.53943H13.4057Z" fill="#F9D7C0"/>
+                            <path d="M19.5073 9.06477L14.9311 7.53939L13.4057 9.06477V7.53939C13.4057 5.85436 14.7715 4.48828 16.4565 4.48828C18.1415 4.48828 19.5073 5.85436 19.5073 7.53939V9.06477Z" fill="#834B10"/>
+                            <path d="M43.9141 44.9121H32.4735L27.897 36.5223H35.5243L37.9512 40.336H41.6258L43.9141 44.9121Z" fill="#428DC5"/>
+                            <path d="M5.77845 44.9121L10.3546 37.2848H17.9819L21.7955 31.9462H29.4224L32.4735 44.9121H5.77845Z" fill="#4799CF"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0">
+                            <rect width="45" height="45" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
                     </div>
 
                     <svg class="decoration_1" width="30" height="49" viewBox="0 0 30 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -157,12 +160,12 @@
                         <path d="M24 12H30V18H24V12Z" fill="#F9F9F9" fill-opacity="0.2"/>
                     </svg>
                 </div>
-                <h3 class="title">You're about of half step to goal!</h3>
-                <h4 class="description">We will contact you as soon as we review your resume. We are already sure you are brilliant!</h4>
+                <h2 class="title">You're about of half step to goal!</h2>
+                <p class="description">We will contact you as soon as we review your resume. We are already sure you are brilliant!</p>
     
                 <a href="https://www.lagoteam.io/" >Back to home</a>
-            </section>
-        </div>
+            </div>
+        </section>
     </body>
 
     <script>
@@ -214,7 +217,6 @@
         function toggle(element, state) {
             element.style.display = state;
         }
-
 
 
     </script>
